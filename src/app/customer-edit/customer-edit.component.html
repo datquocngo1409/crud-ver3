@@ -1,0 +1,23 @@
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+  <table>
+    <tr>
+      <td>Name: </td>
+      <td><input type="text" formControlName="name"></td>
+      <td *ngIf="customerForm.get('name').invalid && customerForm.get('name').touched" style="color: red">Min Length 10</td>
+    </tr>
+    <tr>
+      <td>Age: </td>
+      <td><input type="text" formControlName="age"></td>
+    </tr>
+    <tr>
+      <td>Finish: </td>
+      <td>
+        <select formControlName="finish">
+          <option [ngValue]="true">True</option>
+          <option [ngValue]="false">False</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <button type="submit">Update</button>
+</form>

@@ -1,0 +1,20 @@
+<table border="1">
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Finish</td>
+    <td>Edit</td>
+    <td>Delete</td>
+  </tr>
+  <tr *ngFor="let customer of customers; index as i">
+    <td>{{customer.id}}</td>
+    <td><a [routerLink]="['/customer', customer.id]">{{customer.name}}</a></td>
+    <td>{{customer.age}}</td>
+    <td>{{customer.finish}}</td>
+    <td><a [routerLink]="['/customer/edit', customer.id]">Edit</a></td>
+    <td>
+      <button (click)="delete(i)">Delete</button>
+    </td>
+  </tr>
+</table>
