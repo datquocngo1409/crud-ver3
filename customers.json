@@ -1,0 +1,22 @@
+{
+  "customer": [
+    {
+      "name": "Ngô Quốc Đạt",
+      "age": 18,
+      "finish": true,
+      "id": 1
+    },
+    {
+      "name": "Ngô Quốc Đạt",
+      "age": "19",
+      "finish": false,
+      "id": 2
+    },
+    {
+      "name": "Ngô Quốc Đạt",
+      "age": "20",
+      "finish": true,
+      "id": 3
+    }
+  ]
+}
